@@ -11,14 +11,42 @@
 .btn{
     .button-style(#22283a, white);
     font-size: 2rem;
-    margin: 0;
-    padding: 10px;
+    .margin-padding(0, 10px);
     max-width: 30%;
     text-align: center;
     border-radius: 5px;
 
+    &:hover{
+        background-color: cadetblue;
+        color: aquamarine;
+    }
+
+    @media @phone{
+        max-width: 100%;
+        padding: 20px;
+        margin: auto;
+    }
 }
 
+.space-images{
+    .sky{
+        @media @phone{
+            display: none;
+        }
+    }
+    .launch{
+        @media @phone{
+            display: none;
+        }
+    }
+
+    .blast img{
+        @media @phone{
+            width: 100%;
+            
+        }
+    }
+}
 
 
 

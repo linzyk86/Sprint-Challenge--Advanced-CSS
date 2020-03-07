@@ -1,3 +1,7 @@
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -164,9 +168,9 @@ nav {
   width: 100%;
   background-color: whitesmoke;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   padding: 30px 0;
 }
 nav .nav-links {
@@ -184,6 +188,12 @@ nav a {
 nav h1 {
   font-size: 4rem;
   padding: 10px;
+}
+@media (max-width: 500px) {
+  hr {
+    padding: 0;
+    margin: 0;
+  }
 }
 footer {
   color: #22283B;
@@ -212,6 +222,11 @@ footer {
   border-radius: 20px;
   height: 100%;
 }
+@media (max-width: 500px) {
+  .home .space-images img {
+    width: 100%;
+  }
+}
 .home .visit-planets {
   padding: 15px;
 }
@@ -220,6 +235,11 @@ footer {
 }
 .home .visit-planets p {
   margin-top: 13px;
+}
+@media (max-width: 500px) {
+  .home .visit-planets {
+    max-width: 95%;
+  }
 }
 .home .walk {
   margin-top: 60px;
@@ -237,17 +257,48 @@ footer {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 95%;
+  }
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 100%;
+    padding-bottom: 10px;
+  }
 }
 .home .walk .walk-img img {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .home .walk {
+    flex-direction: column-reverse;
+    padding: 10px;
+    align-items: center;
+  }
+}
 header img {
-  border-radius: 10px;
+  border-radius: 5px;
+  margin-top: 0;
+}
+@media (max-width: 500px) {
+  header img {
+    max-width: 100%;
+  }
 }
 .btn {
   background-color: #22283a;
@@ -258,4 +309,30 @@ header img {
   max-width: 30%;
   text-align: center;
   border-radius: 5px;
+}
+.btn:hover {
+  background-color: cadetblue;
+  color: aquamarine;
+}
+@media (max-width: 500px) {
+  .btn {
+    max-width: 100%;
+    padding: 20px;
+    margin: auto;
+  }
+}
+@media (max-width: 500px) {
+  .space-images .sky {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .space-images .launch {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .space-images .blast img {
+    width: 100%;
+  }
 }
